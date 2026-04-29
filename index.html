@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <link rel="icon" href="favicon.ico" />
@@ -94,6 +94,263 @@
             body.colorblind .session-timer,
             body.colorblind .timer-display {
                 color: #fde68a !important;
+            }
+            body.light-mode {
+                --bg: #eef4fb;
+                --border: rgba(123, 145, 170, 0.55);
+                --border-hi: rgba(71, 102, 138, 0.82);
+                --amber: #1d4f91;
+                --amber-bright: #143a6b;
+                --amber-dim: #4d6584;
+                --amber-glow: rgba(29, 79, 145, 0.16);
+                --green: #117a58;
+                --green-dim: #0f5d44;
+                --red: #b42318;
+                --cream: #24364f;
+                --shadow: rgba(34, 51, 84, 0.18);
+                --sync-color: #1d4f91;
+                --sync-glow: rgba(29, 79, 145, 0.22);
+                color-scheme: light;
+                background:
+                    radial-gradient(circle at top, rgba(255, 255, 255, 0.78), transparent 42%),
+                    linear-gradient(160deg, #f6fbff 0%, #e7eef7 52%, #dbe5f1 100%);
+            }
+            body.light-mode.colorblind {
+                --amber: #0f5bd3;
+                --amber-bright: #083d99;
+                --amber-dim: #405d8a;
+                --amber-glow: rgba(15, 91, 211, 0.16);
+                --green: #a16207;
+                --green-dim: #854d0e;
+                --sync-color: #a16207;
+                --sync-glow: rgba(161, 98, 7, 0.24);
+                --cream: #22324a;
+            }
+            body.light-mode.colorblind .knob-val {
+                text-shadow: none !important;
+                color: var(--amber-bright) !important;
+            }
+            body.light-mode.colorblind #test-btn {
+                background: #0a2f5a;
+                border-color: #1e6bb5;
+                color: #dbeafe;
+                box-shadow: none;
+            }
+            body.light-mode.colorblind #test-btn:hover {
+                background: #0c3f70;
+                border-color: #3b82f6;
+                color: #eef2ff;
+            }
+            body.light-mode .top-wrapper,
+            body.light-mode #ctrl-panel {
+                color: var(--cream);
+            }
+            body.light-mode #top-hud {
+                background:
+                    repeating-linear-gradient(
+                        90deg,
+                        transparent,
+                        transparent 5px,
+                        rgba(115, 139, 168, 0.08) 5px,
+                        rgba(115, 139, 168, 0.08) 10px
+                    ),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.74) 0%, rgba(236, 243, 251, 0.92) 100%);
+                border-bottom: 1px solid rgba(117, 138, 166, 0.38);
+                box-shadow: 0 10px 28px rgba(85, 107, 135, 0.16);
+            }
+            body.light-mode .hud-seg {
+                background: rgba(255, 255, 255, 0.34);
+                border-right-color: rgba(126, 147, 172, 0.26);
+                backdrop-filter: blur(16px) saturate(1.1);
+            }
+            body.light-mode .hud-label,
+            body.light-mode .tog-text,
+            body.light-mode .storage-note,
+            body.light-mode .info-a,
+            body.light-mode .knob-label {
+                color: var(--amber-dim);
+            }
+            body.light-mode .vfd-box,
+            body.light-mode .session-timer,
+            body.light-mode .timer-display {
+                background: rgba(246, 251, 255, 0.95);
+                color: #115e44;
+                border-color: rgba(81, 139, 119, 0.55);
+                text-shadow: none;
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            }
+            body.light-mode .tooltip {
+                background: rgba(255, 255, 255, 0.95);
+                color: var(--amber-bright);
+                border-color: rgba(92, 118, 152, 0.42);
+                box-shadow: 0 10px 26px rgba(44, 66, 93, 0.16);
+            }
+            body.light-mode .hud-input,
+            body.light-mode .preset-sel,
+            body.light-mode .timer-set-val {
+                background: rgba(255, 255, 255, 0.78);
+                border-color: rgba(124, 144, 170, 0.5);
+                color: var(--cream);
+            }
+            body.light-mode .pill,
+            body.light-mode .mod-collapse-btn,
+            body.light-mode .wav-btn {
+                background: rgba(255, 255, 255, 0.7);
+                border-color: rgba(104, 128, 158, 0.45);
+                color: var(--amber);
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            }
+            body.light-mode .pill:hover,
+            body.light-mode .mod-collapse-btn:hover,
+            body.light-mode .wav-btn:hover,
+            body.light-mode .pill.active,
+            body.light-mode .wav-btn.active {
+                background: rgba(238, 245, 255, 0.96);
+                color: var(--amber-bright);
+                border-color: rgba(29, 79, 145, 0.5);
+            }
+            body.light-mode .pill.red {
+                background: rgba(255, 240, 240, 0.88);
+                border-color: rgba(180, 35, 24, 0.35);
+                color: #a12b20;
+            }
+            body.light-mode .pill.green {
+                background: rgba(239, 251, 245, 0.9);
+                border-color: rgba(17, 122, 88, 0.35);
+                color: #0f6a4d;
+            }
+            body.light-mode .dev-chip.on {
+                background: rgba(233, 249, 240, 0.92);
+                border-color: rgba(17, 122, 88, 0.38);
+            }
+            body.light-mode .dev-chip.off {
+                background: rgba(241, 245, 249, 0.9);
+                color: #5f7187;
+                border-color: rgba(132, 148, 170, 0.28);
+            }
+            body.light-mode .tog-track {
+                background: rgba(214, 225, 238, 0.95);
+                border-color: rgba(117, 138, 166, 0.5);
+            }
+            body.light-mode .tog-track::after {
+                background: linear-gradient(135deg, #fdfefe, #c7d4e5);
+            }
+            body.light-mode input:checked + .tog-track {
+                background: rgba(220, 242, 234, 0.96);
+                border-color: rgba(17, 122, 88, 0.5);
+            }
+            body.light-mode input:checked + .tog-track::after {
+                background: linear-gradient(135deg, #f7fffb, #84c5ac);
+            }
+            body.light-mode .panel-cap {
+                background:
+                    repeating-linear-gradient(
+                        90deg,
+                        transparent,
+                        transparent 4px,
+                        rgba(154, 174, 198, 0.08) 4px,
+                        rgba(154, 174, 198, 0.08) 8px
+                    ),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.76) 0%, rgba(233, 240, 248, 0.94) 100%);
+                border-top: 1px solid rgba(119, 141, 170, 0.36);
+                box-shadow:
+                    inset 0 -1px 0 rgba(255, 255, 255, 0.9),
+                    0 -8px 24px rgba(88, 108, 136, 0.12);
+            }
+            body.light-mode .panel-cap .panel-title {
+                color: #375172;
+                text-shadow: none;
+            }
+            body.light-mode .panel-scroll {
+                background:
+                    linear-gradient(180deg, rgba(244, 248, 253, 0.92) 0%, rgba(229, 237, 246, 0.92) 100%),
+                    repeating-linear-gradient(
+                        0deg,
+                        rgba(126, 146, 170, 0.04) 0px,
+                        rgba(126, 146, 170, 0.04) 10px,
+                        rgba(255, 255, 255, 0.08) 10px,
+                        rgba(255, 255, 255, 0.08) 14px
+                    );
+            }
+            body.light-mode .mod {
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.76) 0%, rgba(245, 249, 253, 0.68) 100%);
+                border: 1px solid rgba(119, 142, 170, 0.34);
+                box-shadow:
+                    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+                    0 12px 32px rgba(80, 102, 131, 0.16);
+            }
+            body.light-mode .mod::before {
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.08) 80%);
+            }
+            body.light-mode .mod-title-text {
+                background: rgba(255, 255, 255, 0.85);
+                color: var(--amber-bright);
+                text-shadow: none;
+                border: 1px solid rgba(115, 138, 168, 0.22);
+            }
+            body.light-mode .mod-grip {
+                color: var(--amber-dim);
+            }
+            body.light-mode .mod-grip:hover {
+                background: rgba(29, 79, 145, 0.08);
+                color: var(--amber-bright);
+            }
+            body.light-mode .knob-body {
+                background: radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.9) 0%, transparent 48%),
+                    conic-gradient(
+                        from 190deg,
+                        #d7dfe8 0deg,
+                        #eef3f8 45deg,
+                        #d7dfe8 90deg,
+                        #c2ccd8 135deg,
+                        #d7dfe8 180deg,
+                        #eef3f8 225deg,
+                        #d7dfe8 270deg,
+                        #c2ccd8 315deg,
+                        #d7dfe8 360deg
+                    );
+                border-color: rgba(129, 147, 171, 0.42);
+                box-shadow:
+                    0 6px 14px rgba(71, 93, 124, 0.18),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.94);
+            }
+            body.light-mode .knob-body::before {
+                background: repeating-conic-gradient(
+                    rgba(144, 160, 180, 0.75) 0deg 7deg,
+                    rgba(237, 242, 247, 0.95) 7deg 14deg
+                );
+            }
+            body.light-mode .knob-body::after {
+                background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.95), rgba(209, 218, 229, 0.85));
+                box-shadow: inset 0 0 3px rgba(86, 104, 130, 0.18);
+            }
+            body.light-mode .knob-body:focus-visible {
+                box-shadow:
+                    0 6px 14px rgba(71, 93, 124, 0.18),
+                    0 0 0 3px rgba(29, 79, 145, 0.28);
+            }
+            body.light-mode .knob-val {
+                background: rgba(255, 255, 255, 0.88);
+                color: var(--amber-bright);
+            }
+            body.light-mode hr.soft {
+                border-top-color: rgba(123, 145, 170, 0.24);
+            }
+            body.light-mode .drag-ghost {
+                background: rgba(255, 255, 255, 0.55);
+                border-color: rgba(29, 79, 145, 0.52);
+            }
+            body.light-mode.colorblind .vfd-box,
+            body.light-mode.colorblind .session-timer,
+            body.light-mode.colorblind .timer-display {
+                color: #8a5308 !important;
+                border-color: rgba(161, 98, 7, 0.48) !important;
+            }
+            body.light-mode.colorblind .hud-label,
+            body.light-mode.colorblind .knob-label,
+            body.light-mode.colorblind .tog-text,
+            body.light-mode.colorblind .mod-title-text {
+                color: var(--amber-bright) !important;
             }
             #main-canvas {
                 position: fixed;
@@ -1025,6 +1282,9 @@
                     ><label class="tog-wrap"
                         ><input type="checkbox" id="colorblind-tog" /><span class="tog-track"></span
                         ><span class="tog-text">cvd</span></label
+                    ><label class="tog-wrap"
+                        ><input type="checkbox" id="light-tog" /><span class="tog-track"></span
+                        ><span class="tog-text">light</span></label
                     ><button class="pill" id="fullscreen-btn">⛶</button
                     ><label class="tog-wrap"
                         ><input type="checkbox" id="hints-tog" checked /><span class="tog-track"></span
@@ -1519,6 +1779,7 @@
                     "autofade-tog": "auto‑hide panels after 10s inactivity",
                     "visual-tog": "show / hide moving light elements",
                     "colorblind-tog": "high‑contrast color‑blind mode",
+                    "light-tog": "toggle light interface mode",
                     "fullscreen-btn": "toggle fullscreen",
                     "sync-led": "connection status",
                     "ws-url-input": "websocket server address",
@@ -1719,6 +1980,7 @@
                     hapticSoundLink: false,
                     visualHidden: false,
                     colorblindMode: false,
+                    lightMode: false,
                     therapistMode: false,
                     trackYOffset: 0,
                     bounceStyle: "linear",
@@ -1730,6 +1992,7 @@
                     starSpeed: 40,
                     starRotation: 0.0,
                     effectiveStarSpeed: 0,
+                    starfieldOpacity: 0,
                     currentTrackY: 0,
                     timerMode: "stopwatch",
                     timerRunning: false,
@@ -1739,6 +2002,9 @@
                     timerAlarmTime: "15:00",
                     stars: [],
                 };
+                try {
+                    state.lightMode = localStorage.getItem("emdr_theme_mode") === "light";
+                } catch (e) {}
                 function initStars() {
                     state.stars = Array.from({ length: 200 }, () => {
                         const hue = 200 + Math.random() * 160;
@@ -2116,9 +2382,37 @@
                     );
                 });
                 document.addEventListener("keydown", (e) => {
-                    if (e.target.tagName === "INPUT") return;
+                    const target = e.target;
+                    const isEditable =
+                        target?.tagName === "INPUT" ||
+                        target?.tagName === "TEXTAREA" ||
+                        target?.tagName === "SELECT" ||
+                        target?.isContentEditable;
+                    if (isEditable) return;
                     const ctrl = e.ctrlKey || e.metaKey;
-                    if (e.code === "Space") {
+                    if (ctrl && e.code === "KeyS") {
+                        e.preventDefault();
+                        profileSaveBtn.click();
+                    } else if (ctrl && e.code === "KeyL") {
+                        e.preventDefault();
+                        profileLoadBtn.click();
+                    } else if (ctrl && e.code === "KeyE") {
+                        e.preventDefault();
+                        profileExportBtn.click();
+                    } else if (ctrl && e.code === "KeyI") {
+                        e.preventDefault();
+                        profileImportBtn.click();
+                    } else if (ctrl && e.code === "KeyZ") {
+                        e.preventDefault();
+                        undoLastOperation();
+                    } else if (ctrl && e.code === "KeyY") {
+                        e.preventDefault();
+                        redoLastOperation();
+                    } else if (ctrl && e.code === "KeyR") {
+                        e.preventDefault();
+                        if (sessionRecording) stopRecording();
+                        else startRecording();
+                    } else if (e.code === "Space") {
                         e.preventDefault();
                         togglePause();
                     } else if (e.code === "KeyM") {
@@ -2127,24 +2421,20 @@
                     } else if (e.code === "KeyF") {
                         e.preventDefault();
                         toggleFullscreen();
-                    } else if (e.code === "KeyS" && ctrl) {
+                    } else if (e.code === "KeyS") {
                         e.preventDefault();
-                        exportConfig();
-                    } else if (e.code === "KeyO" && ctrl) {
+                        toggleEls["starfield-tog"].click();
+                    } else if (e.code === "KeyT") {
                         e.preventDefault();
-                        triggerImport();
-                    } else if (e.code === "KeyS" && ctrl && e.shiftKey) {
+                        if (state.timerRunning) timerPauseBtn.click();
+                        else timerStartBtn.click();
+                    } else if (e.code === "KeyH") {
                         e.preventDefault();
-                        saveConfigLS();
-                    } else if (e.code === "KeyL" && ctrl) {
-                        e.preventDefault();
-                        loadConfigLS();
-                    } else if (e.code === "Escape" || e.code === "KeyH") {
+                        hideBtn.click();
+                    } else if (e.code === "Escape") {
                         if (manualHideActive) {
-                            manualHideActive = false;
-                            showControls();
-                            document.getElementById("hide-controls-btn").classList.remove("active");
                             e.preventDefault();
+                            hideBtn.click();
                         }
                     } else {
                         let t = "speed";
@@ -2343,6 +2633,80 @@
                     if (s) customPresets = JSON.parse(s);
                 } catch (e) {}
                 const presetSel = document.getElementById("preset-select");
+                const DEFAULT_STARTUP_CONFIG = {
+                    speed: 0.5072000000000014,
+                    brightness: 1.0639999999999998,
+                    lightHue: 120,
+                    glow: 0.998,
+                    barStretch: 1,
+                    saturation: 1,
+                    edgeIntensity: 0.5800000000000001,
+                    scopeHeight: 24,
+                    scopeBrightness: 0.7,
+                    scopeEnabled: false,
+                    masterVolume: 0.7,
+                    harmonics: 0.62,
+                    toneFreq: 61,
+                    attack: 0.019,
+                    decay: 1,
+                    filterCutoff: 100,
+                    filterEnv: 0,
+                    filterQ: 4.5,
+                    echoDelay: 0.05,
+                    echoFeedback: 0,
+                    echoMix: 0,
+                    reverbMix: 0,
+                    chorusMix: 0,
+                    chorusRate: 1.2800000000000002,
+                    chorusDepth: 0,
+                    stereoWidth: 1,
+                    waveform: "sine",
+                    spectrumMode: false,
+                    paused: true,
+                    muted: false,
+                    phase: 0.5,
+                    bgColor: "#000000",
+                    waveFollow: false,
+                    lfoRate: 0.5,
+                    lfoDepth: 0,
+                    lfoDest: "cutoff",
+                    lfoWave: "sine",
+                    hapticIntensity: 1,
+                    hapticDecay: 50,
+                    hapticSoundLink: false,
+                    visualHidden: false,
+                    colorblindMode: false,
+                    therapistMode: false,
+                    trackYOffset: 0,
+                    bounceStyle: "linear",
+                    bounceAmount: 1,
+                    graticuleVisible: false,
+                    starfieldEnabled: false,
+                    starLinkEnabled: true,
+                    starReverse: true,
+                    starSpeed: 40,
+                    starRotation: 0,
+                    ui: {
+                        autoHide: true,
+                        hintsOn: true,
+                        bgColor: "#000000",
+                        scopeEnabled: false,
+                        spectrumMode: false,
+                        waveFollow: false,
+                        hapticSoundLink: false,
+                        visualHidden: false,
+                        colorblindMode: false,
+                        therapistMode: false,
+                        graticuleVisible: false,
+                        starfieldEnabled: false,
+                        starLinkEnabled: true,
+                        starReverse: true,
+                    },
+                    sync: {
+                        server: "wss://emdr-relay.robynsmith248.workers.dev",
+                        room: "",
+                    },
+                };
                 function populatePresets() {
                     presetSel.innerHTML = "";
                     Object.entries(PRESETS).forEach(([k, p]) => {
@@ -2469,52 +2833,31 @@
                     sendState();
                     recordSnapshot();
                 });
-                document.getElementById("haptic-sound-link-tog").addEventListener("change", (e) => {
-                    state.hapticSoundLink = e.target.checked;
-                    sendState();
-                    recordSnapshot();
-                });
-                document.getElementById("visual-tog").addEventListener("change", (e) => {
-                    state.visualHidden = !e.target.checked;
-                    sendState();
-                    recordSnapshot();
-                });
-                document.getElementById("colorblind-tog").addEventListener("change", (e) => {
-                    state.colorblindMode = e.target.checked;
-                    updateColorblindClass();
-                    updateAllKnobs();
-                    updateBounceStyleVisual();
-                    sendState();
-                    recordSnapshot();
-                });
-                document.getElementById("therapist-tog").addEventListener("change", (e) => {
-                    state.therapistMode = e.target.checked;
-                    if (state.therapistMode && ws?.readyState === WebSocket.OPEN) sendState();
-                    sendState();
-                    recordSnapshot();
-                });
-                document.getElementById("graticule-tog").addEventListener("change", (e) => {
-                    state.graticuleVisible = e.target.checked;
-                    sendState();
-                    recordSnapshot();
-                });
-                document.getElementById("starfield-tog").addEventListener("change", (e) => {
-                    state.starfieldEnabled = e.target.checked;
-                    sendState();
-                    recordSnapshot();
-                });
-                document.getElementById("star-link-tog").addEventListener("change", (e) => {
-                    state.starLinkEnabled = e.target.checked;
-                    sendState();
-                    recordSnapshot();
-                });
-                document.getElementById("star-reverse-tog").addEventListener("change", (e) => {
-                    state.starReverse = e.target.checked;
-                    sendState();
-                    recordSnapshot();
-                });
                 function updateColorblindClass() {
                     document.body.classList.toggle("colorblind", state.colorblindMode);
+                }
+                function updateThemeClass() {
+                    document.body.classList.toggle("light-mode", state.lightMode);
+                    try {
+                        localStorage.setItem("emdr_theme_mode", state.lightMode ? "light" : "dark");
+                    } catch (e) {}
+                }
+                function updateAppearance() {
+                    updateColorblindClass();
+                    updateThemeClass();
+                }
+                function refreshVisualState() {
+                    updateAppearance();
+                    updateAllKnobs();
+                    updateBounceStyleVisual();
+                }
+                function syncWaveButtons() {
+                    document
+                        .querySelectorAll(".wav-btn")
+                        .forEach((b) => b.classList.toggle("active", b.dataset.wave === state.waveform));
+                    document
+                        .querySelectorAll("#lfo-wave-selector .wav-btn")
+                        .forEach((b) => b.classList.toggle("active", b.dataset.lfoWave === state.lfoWave));
                 }
                 let audioCtx = null,
                     filterNode,
@@ -2943,6 +3286,7 @@
                         hapticSoundLink: state.hapticSoundLink,
                         visualHidden: state.visualHidden,
                         colorblindMode: state.colorblindMode,
+                        lightMode: state.lightMode,
                         therapistMode: state.therapistMode,
                         trackYOffset: state.trackYOffset,
                         bounceStyle: state.bounceStyle,
@@ -2955,6 +3299,9 @@
                         starRotation: state.starRotation,
                     };
                 }
+                function cloneFullState(data = getFullState()) {
+                    return JSON.parse(JSON.stringify(data));
+                }
                 function applyFullState(data) {
                     isRemote = true;
                     if (state.therapistMode) {
@@ -2965,34 +3312,47 @@
                         Object.keys(data).forEach((k) => {
                             if (k in state) state[k] = data[k];
                         });
-                        updateAllKnobs();
                         updateAudioParams();
-                        updateToggles();
-                        updateBounceStyleVisual();
-                        document.getElementById("bg-color").value = state.bgColor;
-                        document
-                            .querySelectorAll(".wav-btn")
-                            .forEach((b) => b.classList.toggle("active", b.dataset.wave === state.waveform));
-                        document
-                            .querySelectorAll("#lfo-wave-selector .wav-btn")
-                            .forEach((b) => b.classList.toggle("active", b.dataset.lfoWave === state.lfoWave));
-                        document.getElementById("lfo-dest").value = state.lfoDest;
-                        document.getElementById("haptic-sound-link-tog").checked = state.hapticSoundLink;
-                        document.getElementById("visual-tog").checked = !state.visualHidden;
-                        document.getElementById("colorblind-tog").checked = state.colorblindMode;
-                        document.getElementById("therapist-tog").checked = state.therapistMode;
-                        document.getElementById("graticule-tog").checked = state.graticuleVisible;
-                        document.getElementById("starfield-tog").checked = state.starfieldEnabled;
-                        document.getElementById("star-link-tog").checked = state.starLinkEnabled;
-                        document.getElementById("star-reverse-tog").checked = state.starReverse;
-                        updateColorblindClass();
-                        updateAllKnobs();
-                        updateBounceStyleVisual();
+                        syncStateInputs();
+                        refreshVisualState();
                         updatePauseBtn();
                         updateMuteBtn();
                     } finally {
                         isRemote = false;
                     }
+                }
+                let undoStack = [],
+                    redoStack = [],
+                    isHistoryApplying = false;
+                function pushHistorySnapshot(data = getFullState()) {
+                    if (isHistoryApplying || isRemote) return;
+                    const snapshot = cloneFullState(data);
+                    const last = undoStack[undoStack.length - 1];
+                    if (last && JSON.stringify(last) === JSON.stringify(snapshot)) return;
+                    undoStack.push(snapshot);
+                    if (undoStack.length > 100) undoStack.shift();
+                    redoStack.length = 0;
+                }
+                function applyHistoryState(snapshot) {
+                    isHistoryApplying = true;
+                    try {
+                        applyFullState(cloneFullState(snapshot));
+                    } finally {
+                        isHistoryApplying = false;
+                    }
+                    sendState();
+                }
+                function undoLastOperation() {
+                    if (undoStack.length <= 1) return;
+                    const current = undoStack.pop();
+                    redoStack.push(cloneFullState(current));
+                    applyHistoryState(undoStack[undoStack.length - 1]);
+                }
+                function redoLastOperation() {
+                    if (!redoStack.length) return;
+                    const snapshot = redoStack.pop();
+                    undoStack.push(cloneFullState(snapshot));
+                    applyHistoryState(snapshot);
                 }
                 function sendState() {
                     if (ws?.readyState === WebSocket.OPEN && !isRemote)
@@ -3059,6 +3419,87 @@
                     muteBtn.textContent = state.muted ? "unmute" : "mute";
                     muteBtn.classList.toggle("active", state.muted);
                 }
+                const toggleBindings = {
+                    "scope-tog": {
+                        getChecked: () => state.scopeEnabled,
+                        applyChecked: (checked) => {
+                            state.scopeEnabled = checked;
+                        },
+                    },
+                    "spectrum-tog": {
+                        getChecked: () => state.spectrumMode,
+                        applyChecked: (checked) => {
+                            state.spectrumMode = checked;
+                        },
+                    },
+                    "wavefollow-tog": {
+                        getChecked: () => state.waveFollow,
+                        applyChecked: (checked) => {
+                            state.waveFollow = checked;
+                        },
+                    },
+                    "haptic-sound-link-tog": {
+                        getChecked: () => state.hapticSoundLink,
+                        applyChecked: (checked) => {
+                            state.hapticSoundLink = checked;
+                        },
+                    },
+                    "visual-tog": {
+                        getChecked: () => !state.visualHidden,
+                        applyChecked: (checked) => {
+                            state.visualHidden = !checked;
+                        },
+                        afterChange: refreshVisualState,
+                    },
+                    "colorblind-tog": {
+                        getChecked: () => state.colorblindMode,
+                        applyChecked: (checked) => {
+                            state.colorblindMode = checked;
+                        },
+                        afterChange: refreshVisualState,
+                    },
+                    "light-tog": {
+                        getChecked: () => state.lightMode,
+                        applyChecked: (checked) => {
+                            state.lightMode = checked;
+                        },
+                        afterChange: refreshVisualState,
+                    },
+                    "therapist-tog": {
+                        getChecked: () => state.therapistMode,
+                        applyChecked: (checked) => {
+                            state.therapistMode = checked;
+                            if (state.therapistMode && ws?.readyState === WebSocket.OPEN) sendState();
+                        },
+                    },
+                    "graticule-tog": {
+                        getChecked: () => state.graticuleVisible,
+                        applyChecked: (checked) => {
+                            state.graticuleVisible = checked;
+                        },
+                    },
+                    "starfield-tog": {
+                        getChecked: () => state.starfieldEnabled,
+                        applyChecked: (checked) => {
+                            state.starfieldEnabled = checked;
+                        },
+                    },
+                    "star-link-tog": {
+                        getChecked: () => state.starLinkEnabled,
+                        applyChecked: (checked) => {
+                            state.starLinkEnabled = checked;
+                        },
+                    },
+                    "star-reverse-tog": {
+                        getChecked: () => state.starReverse,
+                        applyChecked: (checked) => {
+                            state.starReverse = checked;
+                        },
+                    },
+                };
+                const toggleEls = Object.fromEntries(
+                    Object.keys(toggleBindings).map((id) => [id, document.getElementById(id)])
+                );
                 function togglePause() {
                     state.paused = !state.paused;
                     if (!state.paused) {
@@ -3096,38 +3537,26 @@
                     document.getElementById("fullscreen-btn").textContent = document.fullscreenElement ? "⛶ exit" : "⛶";
                 });
                 function updateToggles() {
-                    document.getElementById("scope-tog").checked = state.scopeEnabled;
-                    document.getElementById("spectrum-tog").checked = state.spectrumMode;
-                    document.getElementById("wavefollow-tog").checked = state.waveFollow;
-                    document.getElementById("haptic-sound-link-tog").checked = state.hapticSoundLink;
-                    document.getElementById("visual-tog").checked = !state.visualHidden;
-                    document.getElementById("colorblind-tog").checked = state.colorblindMode;
-                    document.getElementById("therapist-tog").checked = state.therapistMode;
-                    document.getElementById("graticule-tog").checked = state.graticuleVisible;
-                    document.getElementById("starfield-tog").checked = state.starfieldEnabled;
-                    document.getElementById("star-link-tog").checked = state.starLinkEnabled;
-                    document.getElementById("star-reverse-tog").checked = state.starReverse;
+                    Object.entries(toggleBindings).forEach(([id, binding]) => {
+                        toggleEls[id].checked = binding.getChecked();
+                    });
                     const hueKnob = knobEls["lightHue"];
                     if (hueKnob) hueKnob.ind.style.opacity = state.spectrumMode ? "0" : "0.8";
-                    updateBounceStyleVisual();
                 }
-                document.getElementById("scope-tog").addEventListener("change", (e) => {
-                    state.scopeEnabled = e.target.checked;
-                    sendState();
-                    recordSnapshot();
-                });
-                document.getElementById("spectrum-tog").addEventListener("change", (e) => {
-                    if (!isRemote) {
-                        state.spectrumMode = e.target.checked;
-                        updateToggles();
+                function syncStateInputs() {
+                    updateToggles();
+                    document.getElementById("bg-color").value = state.bgColor;
+                    document.getElementById("lfo-dest").value = state.lfoDest;
+                    syncWaveButtons();
+                }
+                Object.entries(toggleBindings).forEach(([id, binding]) => {
+                    toggleEls[id].addEventListener("change", (e) => {
+                        binding.applyChecked(e.target.checked);
+                        if (binding.afterChange) binding.afterChange();
+                        else if (id === "spectrum-tog") updateToggles();
                         sendState();
                         recordSnapshot();
-                    }
-                });
-                document.getElementById("wavefollow-tog").addEventListener("change", (e) => {
-                    state.waveFollow = e.target.checked;
-                    sendState();
-                    recordSnapshot();
+                    });
                 });
                 document.getElementById("bg-color").addEventListener("input", (e) => {
                     if (!isRemote) {
@@ -3163,7 +3592,7 @@
                         }, IDLE_TIMEOUT);
                     }
                 }
-                hideBtn.addEventListener("click", () => {
+                function toggleControlsVisibility() {
                     manualHideActive = !manualHideActive;
                     if (manualHideActive) {
                         hideControls();
@@ -3174,7 +3603,8 @@
                     }
                     hideBtn.classList.toggle("active", manualHideActive);
                     hideBtn.textContent = manualHideActive ? "show" : "hide";
-                });
+                }
+                hideBtn.addEventListener("click", toggleControlsVisibility);
                 autofadeTog.addEventListener("change", (e) => {
                     autoHideEnabled = e.target.checked;
                     if (autoHideEnabled && !manualHideActive) {
@@ -3236,6 +3666,7 @@
                     sessionTimeEl.textContent = `${String(min).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
                 }
                 function recordSnapshot() {
+                    pushHistorySnapshot();
                     if (sessionRecording) {
                         const now = performance.now();
                         sessionData.push({ time: now - sessionStartTime, state: getFullState() });
@@ -3390,6 +3821,7 @@
                             hapticSoundLink: state.hapticSoundLink,
                             visualHidden: state.visualHidden,
                             colorblindMode: state.colorblindMode,
+                            lightMode: state.lightMode,
                             therapistMode: state.therapistMode,
                             graticuleVisible: state.graticuleVisible,
                             starfieldEnabled: state.starfieldEnabled,
@@ -3418,23 +3850,14 @@
                         state.waveFollow = config.ui.waveFollow ?? false;
                         state.hapticSoundLink = config.ui.hapticSoundLink ?? false;
                         state.visualHidden = config.ui.visualHidden ?? false;
-                        document.getElementById("visual-tog").checked = !state.visualHidden;
                         state.colorblindMode = config.ui.colorblindMode ?? false;
-                        document.getElementById("colorblind-tog").checked = state.colorblindMode;
-                        updateColorblindClass();
+                        state.lightMode = config.ui.lightMode ?? state.lightMode;
                         state.therapistMode = config.ui.therapistMode ?? false;
-                        document.getElementById("therapist-tog").checked = state.therapistMode;
                         state.graticuleVisible = config.ui.graticuleVisible ?? true;
-                        document.getElementById("graticule-tog").checked = state.graticuleVisible;
                         state.starfieldEnabled = config.ui.starfieldEnabled ?? false;
-                        document.getElementById("starfield-tog").checked = state.starfieldEnabled;
                         state.starLinkEnabled = config.ui.starLinkEnabled ?? false;
-                        document.getElementById("star-link-tog").checked = state.starLinkEnabled;
                         state.starReverse = config.ui.starReverse ?? false;
-                        document.getElementById("star-reverse-tog").checked = state.starReverse;
                         state.bgColor = config.ui.bgColor ?? "#000500";
-                        document.getElementById("bg-color").value = state.bgColor;
-                        updateToggles();
                     }
                     if (config.sync) {
                         document.getElementById("ws-url-input").value = config.sync.server ?? "";
@@ -3442,23 +3865,13 @@
                     }
                     if (config.bounceStyle) {
                         state.bounceStyle = config.bounceStyle;
-                        updateBounceStyleVisual();
                     }
                     if (config.bounceAmount !== undefined) state.bounceAmount = config.bounceAmount;
-                    updateAllKnobs();
+                    syncStateInputs();
+                    refreshVisualState();
                     updateAudioParams();
                     updatePauseBtn();
                     updateMuteBtn();
-                    updateToggles();
-                    updateBounceStyleVisual();
-                    document
-                        .querySelectorAll(".wav-btn")
-                        .forEach((b) => b.classList.toggle("active", b.dataset.wave === state.waveform));
-                    document
-                        .querySelectorAll("#lfo-wave-selector .wav-btn")
-                        .forEach((b) => b.classList.toggle("active", b.dataset.lfoWave === state.lfoWave));
-                    document.getElementById("lfo-dest").value = state.lfoDest;
-                    document.getElementById("haptic-sound-link-tog").checked = state.hapticSoundLink;
                     sendState();
                     recordSnapshot();
                 }
@@ -4031,7 +4444,15 @@
                         const smoothFactor = 1 - Math.exp(-4 * dt);
                         state.currentTrackY = state.currentTrackY + (targetMidY - state.currentTrackY) * smoothFactor;
                         const trackY = state.currentTrackY;
-                        if (state.starfieldEnabled) {
+                        const targetStarfieldOpacity = state.starfieldEnabled ? 1 : 0;
+                        const starfieldFadeFactor = 1 - Math.exp(-4.5 * dt);
+                        state.starfieldOpacity =
+                            state.starfieldOpacity +
+                            (targetStarfieldOpacity - state.starfieldOpacity) * starfieldFadeFactor;
+                        const starfieldOpacity = Math.max(0, Math.min(1, state.starfieldOpacity));
+                        ctx.fillStyle = state.visualHidden ? "#000000" : state.bgColor;
+                        ctx.fillRect(0, 0, W, H);
+                        if (starfieldOpacity > 0.003) {
                             let targetStarSpeed = state.starLinkEnabled
                                 ? state.paused
                                     ? 0
@@ -4041,6 +4462,8 @@
                             state.effectiveStarSpeed =
                                 state.effectiveStarSpeed +
                                 (targetStarSpeed - state.effectiveStarSpeed) * speedSmoothFactor;
+                            ctx.save();
+                            ctx.globalAlpha = starfieldOpacity;
                             ctx.fillStyle = "#000000";
                             ctx.fillRect(0, 0, W, H);
                             const starCenterX = W / 2,
@@ -4074,9 +4497,7 @@
                                     ctx.fill();
                                 }
                             }
-                        } else {
-                            ctx.fillStyle = state.visualHidden ? "#000000" : state.bgColor;
-                            ctx.fillRect(0, 0, W, H);
+                            ctx.restore();
                         }
                         const hue = state.spectrumMode ? displayPhase * 300 : state.lightHue;
                         const rgb =
@@ -4235,13 +4656,13 @@
                     requestAnimationFrame(animate);
                 }
                 addTickMarks();
-                updateAllKnobs();
-                updateToggles();
-                updateColorblindClass();
-                updateBounceStyleVisual();
+                syncStateInputs();
+                refreshVisualState();
                 updatePauseBtn();
                 updateMuteBtn();
-                applyPreset("pulse");
+                applyCompleteConfig(DEFAULT_STARTUP_CONFIG);
+                state.starfieldOpacity = state.starfieldEnabled ? 1 : 0;
+                if (undoStack.length === 0) pushHistorySnapshot();
                 state.lastTimestamp = performance.now();
                 state.currentTrackY =
                     topWrapper.offsetHeight +
